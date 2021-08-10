@@ -25,10 +25,13 @@ stocks_WIG20 = driver.find_elements_by_id('f10')
 for ticker in tickers_WIG20:
     #eliminate all non tickers (tickers are only 3digits)
     if len(ticker.get_attribute('innerHTML')) == 3:
+        #print(ticker.get_attribute('innerHTML'))
         a.append(ticker.get_attribute('innerHTML'))
 
 for stock in stocks_WIG20:
-    if stock.size == {'height': 21, 'width': 164}:
+    #print(stock.get_attribute('innerHTML'))
+    #print(stock.size)
+    if stock.size == {'height': 21, 'width': 165}:
         b.append(stock.get_attribute('innerHTML'))
 
 driver.quit()
@@ -43,10 +46,13 @@ stocks_mWIG40 = driver.find_elements_by_id('f10')
 for ticker in tickers_mWIG40:
     #eliminate all non tickers (tickers are only 3digits)
     if len(ticker.get_attribute('innerHTML')) == 3:
+        #print(ticker.get_attribute('innerHTML'))
         a.append(ticker.get_attribute('innerHTML'))
 
 for stock in stocks_mWIG40:
-    if stock.size == {'height': 21, 'width': 177}:
+    #print(stock.get_attribute('innerHTML'))
+    #print(stock.size)
+    if stock.size == {'height': 21, 'width': 178}:
         b.append(stock.get_attribute('innerHTML'))
 
 driver.quit()
@@ -61,12 +67,14 @@ stocks_sWIG80 = driver.find_elements_by_id('f10')
 for ticker in tickers_sWIG80:
     #eliminate all non tickers (tickers are only 3digits)
     if len(ticker.get_attribute('innerHTML')) == 3:
+        #print(ticker.get_attribute('innerHTML'))
         a.append(ticker.get_attribute('innerHTML'))
 
 for stock in stocks_sWIG80:
     #get_attribute() to get all href
-
-    if stock.size == {'height': 21, 'width': 164}:
+    #print(stock.get_attribute('innerHTML'))
+    #print(stock.size)
+    if stock.size == {'height': 21, 'width': 166}:
         #print(stock.get_attribute('innerHTML'))
         b.append(stock.get_attribute('innerHTML'))
 
